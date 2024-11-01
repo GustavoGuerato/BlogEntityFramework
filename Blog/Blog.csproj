@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="microsoft.entityframeworkcore" Version="8.0.10" />
+    <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="8.0.10" />
+  </ItemGroup>
+
 </Project>
