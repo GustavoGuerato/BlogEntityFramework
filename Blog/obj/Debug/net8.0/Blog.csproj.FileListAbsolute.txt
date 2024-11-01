@@ -1,0 +1,14 @@
+c:\Users\Gustavo\blog2\Blog\bin\Debug\net8.0\Blog.exe
+c:\Users\Gustavo\blog2\Blog\bin\Debug\net8.0\Blog.deps.json
+c:\Users\Gustavo\blog2\Blog\bin\Debug\net8.0\Blog.runtimeconfig.json
+c:\Users\Gustavo\blog2\Blog\bin\Debug\net8.0\Blog.dll
+c:\Users\Gustavo\blog2\Blog\bin\Debug\net8.0\Blog.pdb
+c:\Users\Gustavo\blog2\Blog\obj\Debug\net8.0\Blog.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Gustavo\blog2\Blog\obj\Debug\net8.0\Blog.AssemblyInfoInputs.cache
+c:\Users\Gustavo\blog2\Blog\obj\Debug\net8.0\Blog.AssemblyInfo.cs
+c:\Users\Gustavo\blog2\Blog\obj\Debug\net8.0\Blog.csproj.CoreCompileInputs.cache
+c:\Users\Gustavo\blog2\Blog\obj\Debug\net8.0\Blog.dll
+c:\Users\Gustavo\blog2\Blog\obj\Debug\net8.0\refint\Blog.dll
+c:\Users\Gustavo\blog2\Blog\obj\Debug\net8.0\Blog.pdb
+c:\Users\Gustavo\blog2\Blog\obj\Debug\net8.0\Blog.genruntimeconfig.cache
+c:\Users\Gustavo\blog2\Blog\obj\Debug\net8.0\ref\Blog.dll
