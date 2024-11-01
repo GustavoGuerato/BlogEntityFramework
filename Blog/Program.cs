@@ -12,11 +12,16 @@ namespace Blog
                 // var tag = new Tag { Name = "Asp.NET", Slug = "aspnet" };
                 // context.Tags.Add(tag);
                 // context.SaveChanges();
-                var tag = context.Tags.FirstOrDefault(x => x.Id == 2);
-                tag.Name = ".net";
-                tag.Slug = "dotnet";
+                // var tag = context.Tags.FirstOrDefault(x => x.Id == 2);
+                // tag.Name = ".net";
+                // tag.Slug = "dotnet";
 
-                context.Update(tag);
+                // context.Update(tag);
+                // context.SaveChanges();
+
+                var tag = context.Tags.FirstOrDefault(x => x.Id == 2);
+                
+                context.Remove(tag);
                 context.SaveChanges();
             }
         }
