@@ -6,9 +6,7 @@ namespace Blog
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine("");
-            var ctx = new DataContext();
-            ctx.Categories;
+            using (var context = new DataContext()) { }
         }
     }
 }
