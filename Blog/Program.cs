@@ -19,10 +19,16 @@ namespace Blog
                 // context.Update(tag);
                 // context.SaveChanges();
 
-                var tag = context.Tags.FirstOrDefault(x => x.Id == 2);
-                
-                context.Remove(tag);
-                context.SaveChanges();
+                // var tag = context.Tags.FirstOrDefault(x => x.Id == 2);
+
+                // context.Remove(tag);
+                // context.SaveChanges();
+
+                var tags = context.Tags.ToList().Where(x => x.Name.Contains(".NET"));
+                foreach (var tag in tags)
+                {
+                    System.Console.WriteLine(tag.Name);
+                }
             }
         }
     }
