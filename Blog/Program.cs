@@ -1,5 +1,6 @@
 ﻿using Blog.data;
 using Blog.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Blog
 {
@@ -24,7 +25,7 @@ namespace Blog
                 // context.Remove(tag);
                 // context.SaveChanges();
 
-                var tags = context.Tags.ToList().Where(x => x.Name.Contains(".NET"));
+                var tags = context.Tags.AsNoTracking().ToList();
                 foreach (var tag in tags)
                 {
                     System.Console.WriteLine(tag.Name);
