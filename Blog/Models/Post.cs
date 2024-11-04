@@ -32,9 +32,26 @@ namespace Blog.Models
         public int AuthorId { get; set; }
         public required User Author { get; set; }
 
+        [Required]
+        [MinLength(3)]
+        [MaxLength(160)]
+        [Column("Title", TypeName = "VARCHAR")]
         public required string Title { get; set; }
+
+        [Required]
+        [MinLength(3)]
+        [MaxLength(255)]
+        [Column("Summary", TypeName = "VARCHAR")]
         public required string Summary { get; set; }
+
+        [Required]
+        [Column("Body", TypeName = "TEXT")]
         public required string Body { get; set; }
+
+        [Required]
+        [MinLength(3)]
+        [MaxLength(80)]
+        [Column("Slug", TypeName = "VARCHAR")]
         public required string Slug { get; set; }
 
         public DateTime CreateDate { get; set; }

@@ -20,16 +20,40 @@ namespace Blog.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+
+        [Required]
+        [MinLength(3)]
+        [MaxLength(80)]
+        [Column("Name", TypeName = "NVARCHAR")]
         public required string Name { get; set; }
 
+        [Required]
+        [MinLength(3)]
+        [MaxLength(80)]
+        [Column("Email", TypeName = "NVARCHAR")]
         public required string Email { get; set; }
 
+        [Required]
+        [MinLength(3)]
+        [MaxLength(255)]
+        [Column("PasswordHash", TypeName = "NVARCHAR")]
         public required string PasswordHash { get; set; }
 
+        [Required]
+        [MinLength(3)]
+        [Column("Bio", TypeName = "TEXT")]
         public required string Bio { get; set; }
 
+        [Required]
+        [MinLength(3)]
+        [MaxLength(2000)]
+        [Column("Image", TypeName = "NVARCHAR")]
         public required string Image { get; set; }
 
+        [Required]
+        [MinLength(3)]
+        [MaxLength(80)]
+        [Column("Slug", TypeName = "NVARCHAR")]
         public required string Slug { get; set; }
     }
 }
