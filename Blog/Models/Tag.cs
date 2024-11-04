@@ -12,7 +12,17 @@ namespace Blog.Models
     {
         [Key]
         public int Id { get; set; }
+
+        [Required]
+        [MinLength(3)]
+        [MaxLength(80)]
+        [Column("Name", TypeName = "NVARCHAR")]
         public required string Name { get; set; }
+
+        [Required]
+        [MinLength(3)]
+        [MaxLength(80)]
+        [Column("Slug", TypeName = "NVARCHAR")]
         public required string Slug { get; set; }
     }
 }
