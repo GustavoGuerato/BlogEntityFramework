@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -12,8 +14,11 @@ namespace Blog.Models
     // [Bio] TEXT NOT NULL,
     // [Image] VARCHAR(2000) NOT NULL,
     // [Slug] VARCHAR(80) NOT NULL,
+    [Table("User")]
     public class User
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public required string Name { get; set; }
 
@@ -23,7 +28,7 @@ namespace Blog.Models
 
         public required string Bio { get; set; }
 
-        public required string Image{ get; set; }
+        public required string Image { get; set; }
 
         public required string Slug { get; set; }
     }
