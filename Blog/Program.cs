@@ -25,11 +25,14 @@ namespace Blog
                 // context.Remove(tag);
                 // context.SaveChanges();
 
-                var tags = context.Tags.AsNoTracking().ToList();
-                foreach (var tag in tags)
-                {
-                    System.Console.WriteLine(tag.Name);
-                }
+                // var tags = context.Tags.AsNoTracking().ToList();
+                // foreach (var tag in tags)
+                // {
+                //     System.Console.WriteLine(tag.Name);
+                // }
+
+                var tag = context.Tags.AsNoTracking().SingleOrDefault(t => t.Id == 3);
+                System.Console.WriteLine(tag?.Name);
             }
         }
     }
