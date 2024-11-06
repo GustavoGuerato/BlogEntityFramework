@@ -27,6 +27,9 @@ namespace Blog.data.mappings
                 .HasDefaultValue(DateTime.Now.ToUniversalTime());
 
             builder.HasIndex(x => x.Slug, "IX_Post_Slug").IsUnique();
+
+            //Relacionamentos
+            builder.HasOne(x => x.author).WithMany(x => x.Posts);
         }
     }
 }
