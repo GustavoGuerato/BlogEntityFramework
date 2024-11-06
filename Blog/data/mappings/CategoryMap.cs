@@ -33,6 +33,9 @@ namespace Blog.data.mappings
                 .HasColumnName("Slug")
                 .HasColumnType("NVARCHAR")
                 .HasMaxLength(80);
+
+            //indices
+            builder.HasIndex(x => x.Slug, "IX_Category_Slug").IsUnique();
         }
     }
 }
