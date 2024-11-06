@@ -1,60 +1,19 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Blog.Models
 {
-    //     [Id] INT NOT NULL IDENTITY(1, 1),
-    //     [CategoryId] INT NOT NULL,
-    //     [AuthorId] INT NOT NULL,
-    //     [Title] VARCHAR(160) NOT NULL,
-    //     [Summary] VARCHAR(255) NOT NULL,
-    //     [Body] TEXT NOT NULL,
-    //     [Slug] VARCHAR(80) NOT NULL,
-    //     [CreateDate] DATETIME NOT NULL DEFAULT(GETDATE()),
-    //     [LastUpdateDate] DATETIME NOT NULL DEFAULT(GETDATE()),
-
-    [Table("Post")]
     public class Post
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-
-        [ForeignKey("CategoryId")]
         public int CategoryId { get; set; }
-        public required Category category { get; set; }
-
-        [ForeignKey("AuthorId")]
+        public Category Category { get; set; } = new Category();
         public int AuthorId { get; set; }
-        public required User Author { get; set; }
-
-        [Required]
-        [MinLength(3)]
-        [MaxLength(160)]
-        [Column("Title", TypeName = "VARCHAR")]
-        public required string Title { get; set; }
-
-        [Required]
-        [MinLength(3)]
-        [MaxLength(255)]
-        [Column("Summary", TypeName = "VARCHAR")]
-        public required string Summary { get; set; }
-
-        [Required]
-        [Column("Body", TypeName = "TEXT")]
-        public required string Body { get; set; }
-
-        [Required]
-        [MinLength(3)]
-        [MaxLength(80)]
-        [Column("Slug", TypeName = "VARCHAR")]
-        public required string Slug { get; set; }
-
-        public DateTime CreateDate { get; set; }
-        public DateTime LastUpdateDate { get; set; }
+        public required User  author { get; set; }
+        public string Title { get; set; } = string.Empty;
+        public string Summary { get; set; } = string.Empty;
+        public string Body { get; set; } = string.Empty;
+        public string Slug { get; set; } = string.Empty;
+        public DateTime CreateDate { get; set; } = DateTime.Now;
+        public DateTime LastUpdateDate { get; set; } = DateTime.Now;
     }
 }

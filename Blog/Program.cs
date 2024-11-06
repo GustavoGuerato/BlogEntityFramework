@@ -37,12 +37,14 @@ namespace Blog
             // context.SaveChanges();
 
             var posts = context
-                .Posts.AsNoTracking()
-                .Include(x => x.Author)
+                .Posts.Include(x => x.Author)
+                .Include(x => x.category)
                 .OrderBy(x => x.LastUpdateDate)
-                .ToList();
-            foreach (var post in posts)
-                System.Console.WriteLine($"{post.Title} foi escrito por {post.Author?.Name}");
+                .FirstOrDefault();
+
+            posts.Author.Name = "teste";
+            context.Posts.Update(posts);
+            context.SaveChanges();
         }
     }
 }
