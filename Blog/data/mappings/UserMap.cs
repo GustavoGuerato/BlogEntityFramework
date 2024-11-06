@@ -29,6 +29,15 @@ namespace Blog.data.mappings
             builder.Property(x => x.Email);
             builder.Property(x => x.Image);
             builder.Property(x => x.PasswordHash);
+
+            builder
+                .Property(x => x.Slug)
+                .IsRequired()
+                .HasColumnName("Slug")
+                .HasColumnType("NVARCHAR")
+                .HasMaxLength(80);
+
+            builder.HasIndex(x => x.Slug, "IX_User_Slug").IsUnique();
         }
     }
 }
