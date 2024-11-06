@@ -36,7 +36,11 @@ namespace Blog
             // context.Posts.Add(post);
             // context.SaveChanges();
 
-            var posts = context.Posts.AsNoTracking().OrderBy(x => x.LastUpdateDate).ToList();
+            var posts = context
+                .Posts.AsNoTracking()
+                .Include(x => x.Author)
+                .OrderBy(x => x.LastUpdateDate)
+                .ToList();
             foreach (var post in posts)
                 System.Console.WriteLine($"{post.Title} foi escrito por {post.Author?.Name}");
         }
