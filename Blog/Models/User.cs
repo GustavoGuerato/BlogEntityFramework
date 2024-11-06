@@ -5,11 +5,14 @@ namespace Blog.Models
     public class User
     {
         public int Id { get; set; }
-        public string Name { get; set; } = string.Empty;
-        public string Email { get; set; } = string.Empty;
-        public string PasswordHash { get; set; } = string.Empty;
-        public string Bio { get; set; } = string.Empty;
-        public string Image { get; set; } = string.Empty;
-        public string Slug { get; set; } = string.Empty;
+        public required string Name { get; set; }
+        public required string Email { get; set; }
+        public required string PasswordHash { get; set; }
+        public required string Bio { get; set; }
+        public required string Image { get; set; }
+        public required string Slug { get; set; }
+
+        public IList<Post> Posts { get; set; } = new List<Post>();
+        public IList<Role> Roles { get; set; } = new List<Role>();
     }
 }

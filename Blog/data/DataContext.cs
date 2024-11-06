@@ -10,14 +10,14 @@ namespace Blog.data
 {
     public class DataContext : DbContext
     {
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Post> Posts { get; set; }
+        public required DbSet<Category> Categories { get; set; }
+        public required DbSet<Post> Posts { get; set; }
 
         // public DbSet<PostTag> PostTags { get; set; }
 
-        public DbSet<Role> Roles { get; set; }
-        public DbSet<Tag> Tags { get; set; }
-        public DbSet<User> Users { get; set; }
+        public required DbSet<Role> Roles { get; set; }
+        public required DbSet<Tag> Tags { get; set; }
+        public required DbSet<User> Users { get; set; }
 
         //public DbSet<UserRole> UserRoles { get; set; }
 
