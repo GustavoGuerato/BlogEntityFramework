@@ -12,8 +12,13 @@ namespace Blog.data.mappings
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
-            
             builder.ToTable("Category");
+
+            //chave primaria
+            builder.HasKey(x => x.Id);
+
+            //Identity
+            builder.Property(x => x.Id).ValueGeneratedOnAdd().UseIdentityColumn();
         }
     }
 }
