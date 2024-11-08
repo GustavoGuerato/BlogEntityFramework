@@ -11,10 +11,9 @@ namespace Blog.data
 {
     public class DataContext : DbContext
     {
-        public required DbSet<Category> Categories { get; set; }
-        public required DbSet<Post> Posts { get; set; }
-
-        public required DbSet<User> Users { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options) =>
             options.UseSqlServer(
