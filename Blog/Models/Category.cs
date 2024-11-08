@@ -8,6 +8,6 @@ namespace Blog.Models
         public string Name { get; set; } = string.Empty;
         public string Slug { get; set; } = string.Empty;
 
-        public  Post Posts { get; set; }
+        public List<Post> Posts { get; set; } = new List<Post>();
     }
 }
